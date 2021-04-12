@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6756aa9dbd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>PROJECT</title>
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    
+    <h1 id = "current-city"></h1>
+    <h2 id = "weather-description"></h2>
+    <h3>
+    <i id = "weather-icon"></i>
+    </h3>
+
+    <br />
+
+  <div>
+
+  <form id="search-form">
+  <input type="text" placeholder="City" autofocus="on" autocomplete="off" id = "input-form"/>
+  <i id = "buttons">
+  <button id="search-button">Search</button>
+  <button id="current-button">Current Location</button>
+  </i>
+  </form>
+  
+     <div id ="date"></div>
+
+     <div class="col-12">
+      <div id ="advice">
+     Stay home and binge-watch 📺
+      </div>
+     </div>
+
+    <div class="day-forecast">
+     <div class="row">
+
+      <div class="col">
+        <div class="rain">
+         Rain
+         <p id ="rain-probability"> </p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="temperature">
+         Temperature
+        <p id = "input-current-temp"></p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="wind">
+         Wind
+         <p id="wind-speed"></p>   
+       </div>  
+       </div>
+
+    </div>
+  
+  </div>
+
+  <br/>
+
+ <div class="week">
+   <div class ="row">
+       <div class="col ">
+        17-MAR-21
+       <br/>
+        <i class="fas fa-cloud-rain week-icon"></i>
+        <br/>
+        6℃
+        </div>
+
+        <div class="col">
+          18-MAR-21
+          <br/>
+          <i class="fas fa-cloud-rain week-icon"></i>
+          <br/>
+          6℃
+       </div>
+
+       <div class="col">
+          19-MAR-21
+          <br/>
+          <i class="fas fa-cloud-rain week-icon"></i>
+          <br/>
+          6℃
+       </div>
+
+       <div class="col">
+          20-MAR-21
+          <br/>
+          <i class="fas fa-cloud-rain week-icon"></i>
+          <br/>
+          6℃
+       </div>
+    </div>
+</div>
+
+       <br/>
+
+
+
+  </div>
+</div>
+
+</div>
+      <script src="src/index.js"></script>
+    </div>
+  </body>
+</html>
