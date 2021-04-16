@@ -7,13 +7,10 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="src/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
-      rel="stylesheet"
-    />    
-    <script
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Norican&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/styles.css" />    
+<script
       src="https://kit.fontawesome.com/6756aa9dbd.js"
       crossorigin="anonymous"
     ></script>
@@ -23,6 +20,16 @@
 </head>
 
 <body>
+  <div class="container-fluid">
+  <span class="weather-app"> Weathergram</span>
+  <form id="search-form">
+  <input type="text" placeholder="City" autocomplete="off" id = "input-form"/>
+  <i id = "buttons">
+  <button id="search-button">Search</button>
+  <button id="current-button">Current Location</button>
+  </i>
+  </form>
+</div>
   <div class="container">
     
     <h1 id = "current-city"></h1>
@@ -35,50 +42,42 @@
 
   <div>
 
-  <form id="search-form">
-  <input type="text" placeholder="City" autofocus="on" autocomplete="off" id = "input-form"/>
-  <i id = "buttons">
-  <button id="search-button">Search</button>
-  <button id="current-button">Current Location</button>
-  </i>
-  </form>
-  
      <div id ="date"></div>
-
-     <div class="col-12">
-      <div id ="advice">
-     Stay home and binge-watch 📺
-      </div>
-     </div>
 
     <div class="day-forecast">
      <div class="row">
 
-      <div class="col">
-        <div class="rain">
+   <div class = "col">
+        <div class="rain-module">
+          <div class ="rain-content">
          Rain
          <p id ="rain-probability"> </p>
-        </div>
-      </div>
+         </div>
+         </div>
+         </div>
+      
 
-      <div class="col">
-        <div class="temperature">
+<div class = "col">
+        <div class="temperature-module">
+          <div class="temperature-content">
          Temperature
         <p id = "input-current-temp"></p>
         </div>
-      </div>
+        </div>
+        </div>
+    
 
-      <div class="col">
-        <div class="wind">
+     <div class = "col">
+        <div class="wind-module">
+          <div class="wind-content">
          Wind
          <p id="wind-speed"></p>   
-       </div>  
+         </div>
        </div>
-
     </div>
   
   </div>
-
+    </div>
   <br/>
 
  <div class="week">
