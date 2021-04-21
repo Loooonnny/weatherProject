@@ -76,6 +76,12 @@ function showWeather(response) {
   let wind = Math.round(response.data.wind.speed);
   let windElement = document.querySelector("#wind-speed");
   windElement.innerHTML = `${wind}km/h`;
+
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/10d@2x.png`
+  );
 }
 
 function showCurrentPosition(position) {
