@@ -47,15 +47,18 @@ body {
 
 #weather-description {
   text-align: center;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+#weather-icon {
+  font-size: larger;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  height: 90px;
+  width: 90px;
 }
 
-#weather-icon {
-  color: #495057;
-  display: block;
-  text-align: center;
-  margin-top: 50px;
-  font-size: 100px;
-}
 #input-form {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
