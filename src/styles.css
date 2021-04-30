@@ -94,7 +94,7 @@ body {
   padding: 0px;
 }
 #current-weather-icon {
-  width: 100%;
+  width: 100px;
 }
 #weather-description {
   position: relative;
