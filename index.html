@@ -22,6 +22,8 @@
 <body>
   <div class="container-fluid">
   <span class="weather-app"> Weathergram</span>
+
+  <span id ="form-module">
   <form id="search-form">
   <input type="text" placeholder="City" autocomplete="off" id = "input-form"/>
   <i id = "buttons">
@@ -29,18 +31,29 @@
   <button id="current-button">Current Location</button>
   </i>
   </form>
+  </span>
 </div>
   <div class="container">
-    
-    <h1 id = "current-city"></h1>
-    <p> <img
+   
+    <div class = "row" >
+      <div class = "col"  >
+        <div id = "current-city"></div>
+    </div>
+    <div class = "col"  >
+    <div id = "weather-icon"> <img
     src = "https://ssl.gstatic.com/onebox/weather/64/sunny.png"
     alt = "sky"
-    id = "weather-icon"></img>
-    </p>
-    <p  id = "weather-description"></p>
-  <div>
-     <div id ="date"></div>
+    id = "current-weather-icon"></img>
+    <div  id = "weather-description"></div>
+    </div>
+    </div>
+    </div>
+   <div class = "row" >
+     <div class ="col-12" >
+       <span  id ="date"></span>
+     </div>
+     </div>
+
     <div class="day-forecast">
      <div class="row">
 
@@ -68,7 +81,7 @@
         </div>
     
 
-     <div class = "col">
+     <div class = "col" id = "modules">
         <div class="wind-module">
           <div class="wind-content">
          <div id = "word-wind">Wind</div>
@@ -78,7 +91,7 @@
     </div>
     </div>
     </div>
-  <br/>
+  
 
  <div class="weather-forecast" id="forecast"> </div>
 
