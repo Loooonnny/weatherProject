@@ -77,26 +77,6 @@ function showForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-function search(event) {
-  event.preventDefault();
-  let cityInput = document.querySelector("#input-form");
-  let cityElement = document.querySelector("#current-city");
-  if (cityInput.value) {
-    cityElement.innerHTML = `${cityInput.value}`;
-
-    let apiKey = "8a8290ac2ccd07ce5c6b2f580efac3ba";
-    let units = "metric";
-    let city = cityInput.value;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
-
-    axios.get(`${apiUrl}`).then(showWeather);
-  } else {
-    cityElement.innerHTML = null;
-  }
-}
-let cityForm = document.querySelector("#search-form");
-cityForm.addEventListener("submit", search);
-
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "8a8290ac2ccd07ce5c6b2f580efac3ba";
@@ -153,3 +133,21 @@ function getCurrentPosition() {
 }
 let currentLocButton = document.querySelector("#current-button");
 currentLocButton.addEventListener("click", getCurrentPosition);
+
+function search(city) {
+  let apiKey = "8a8290ac2ccd07ce5c6b2f580efac3ba";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+  axios.get(`${apiUrl}`).then(showWeather);
+}
+
+function submitSearch(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#input-form");
+  let cityElement = document.querySelector("#current-city");
+  cityElement.innerHTML = `${cityInput.value}`;
+  search(cityInput.value);
+}
+
+let cityForm = document.querySelector("#search-form");
+cityForm.addEventListener("submit", search);
+search("Brussels");
