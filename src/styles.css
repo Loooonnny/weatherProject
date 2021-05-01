@@ -99,14 +99,14 @@ body {
 #weather-description {
   position: relative;
   text-align: left;
-  top: -30px;
+  top: -20px;
   bottom: -30px;
   padding-left: 8px;
   font-weight: 200;
   text-transform: uppercase;
 }
 #date {
-  width: 60%;
+  width: 40%;
   display: block;
   text-align: center;
   margin: 0 auto;
@@ -162,7 +162,7 @@ body {
 
   padding-top: 20px;
 }
-#rain-probability {
+#full-rain {
   margin: 0;
   font-weight: 450;
   font-size: 22px;
@@ -202,10 +202,10 @@ body {
   left: -12px;
 }
 #full-temp {
-  text-decoration: none;
   margin: 0;
   font-weight: 450;
   font-size: 22px;
+  padding-top: 15px;
 }
 
 .temperature-content .active {
@@ -246,7 +246,7 @@ body {
   text-align: center;
   padding-top: 20px;
 }
-#wind-speed {
+#full-wind {
   margin: 0;
   font-weight: 450;
   font-size: 22px;
