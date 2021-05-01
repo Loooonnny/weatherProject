@@ -85,29 +85,20 @@ function getForecast(coordinates) {
 }
 
 function showWeather(response) {
-  let city = response.data.name;
-  let cityElement = document.querySelector("#current-city");
-  cityElement.innerHTML = `${city}`;
-
-  let description = response.data.weather[0].description;
+  let tempElement = document.querySelector("#input-current-temp");
+  let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#weather-description");
-  descriptionElement.innerHTML = `${description}`;
-
-  let humidity = response.data.main.humidity;
   let rainElement = document.querySelector("#rain-probability");
-  rainElement.innerHTML = `${humidity}%`;
+  let windElement = document.querySelector("#wind-speed");
+  let iconElement = document.querySelector("#current-weather-icon");
 
   celsiusTemperature = response.data.main.temp;
+  tempElement.innerHTML = Math.round(celsiusTemperature);
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  rainElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 
-  let temperature = Math.round(celsiusTemperature);
-  let tempElement = document.querySelector("#input-current-temp");
-  tempElement.innerHTML = `${temperature}`;
-
-  let wind = Math.round(response.data.wind.speed);
-  let windElement = document.querySelector("#wind-speed");
-  windElement.innerHTML = `${wind}km/h`;
-
-  let iconElement = document.querySelector("#current-weather-icon");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -142,12 +133,11 @@ function search(city) {
 
 function submitSearch(event) {
   event.preventDefault();
-  let cityInput = document.querySelector("#input-form");
-  let cityElement = document.querySelector("#current-city");
-  cityElement.innerHTML = `${cityInput.value}`;
-  search(cityInput.value);
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
 }
 
 let cityForm = document.querySelector("#search-form");
-cityForm.addEventListener("submit", search);
+cityForm.addEventListener("submit", submitSearch);
+
 search("Brussels");

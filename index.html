@@ -28,7 +28,7 @@
     <div class="col-6">
   <div id ="form-module">
   <form id="search-form">
-  <input type="text" placeholder="City" autocomplete="off" id = "input-form"/>
+  <input type="search" placeholder="City" autocomplete="off" id = "city-input"/>
   <i id = "buttons">
   <button id="search-button">Search</button>
   <button id="current-button">Current Location</button>
@@ -41,17 +41,21 @@
   <div class="container">
    
     <div class = "row" >
+
       <div class = "col"  >
-        <div id = "current-city"></div>
+        <div id = "city"></div>
     </div>
+
     <div class = "col"  >
     <div id = "weather-icon"> <img
     src = "https://ssl.gstatic.com/onebox/weather/64/sunny.png"
     alt = "sky"
     id = "current-weather-icon"></img>
+
     <div  id = "weather-description"></div>
     </div>
     </div>
+
     </div>
    <div class = "row" >
      <div class ="col-12" >
@@ -66,7 +70,7 @@
         <div class="rain-module">
           <div class ="rain-content">
           <div id = "word-rain">Rain</div>
-         <p id ="rain-probability"> </p>
+         <p id ="rain-probability">%</p>
          </div>
          </div>
          </div>
@@ -90,7 +94,7 @@
         <div class="wind-module">
           <div class="wind-content">
          <div id = "word-wind">Wind</div>
-         <p id="wind-speed"></p>   
+         <p id="wind-speed"> km/h</p>   
          </div>
        </div>
     </div>
