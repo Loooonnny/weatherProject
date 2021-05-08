@@ -112,7 +112,7 @@ function showWeather(response) {
 
 function showCurrentPosition(position) {
   let lat = position.coords.latitude;
-  let long = position.coords.latitude;
+  let long = position.coords.longitude;
   let apiKey = "8a8290ac2ccd07ce5c6b2f580efac3ba";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=${units}&appid=${apiKey}`;
